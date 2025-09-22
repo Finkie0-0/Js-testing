@@ -1,3 +1,5 @@
+//Searching for name in a list then break when found
+
 const contacts = [
     "Chris:2232322",
     "Sarlina:3453456",
@@ -6,7 +8,7 @@ const contacts = [
     "Priscila:9384975",
 ];
 
-const para = document.querySelector("p");
+const para = document.querySelector("#name");
 const input = document.querySelector("input");
 const btn = document.querySelector("button");
 
@@ -27,5 +29,23 @@ btn.addEventListener("click", () => {
     }
 });
 
+//Search for integer squares of a number when found continue till end of the loop
 
+const paraN = document.querySelector("#numbers");
+const inputNumber = document.querySelector("#numberInput");
+const numBtn = document.querySelector("#numberGen");
+
+numBtn.addEventListener("click", () =>{
+    paraN.textContent = "Output: ";
+    const num = inputNumber.value;
+    inputNumber.value = "";
+    inputNumber.focus();
+    for (let i = 1; i <= num; i++){
+        let squareRoot = Math.sqrt(i);
+        if (Math.floor(squareRoot) !== squareRoot){
+            continue;
+        }
+        paraN.textContent += `${i} `;
+    }
+});
 
