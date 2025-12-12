@@ -18,31 +18,23 @@
 // // admitted.textContent = "Admit: ";
 // // refused.textContent = "Refuse: ";
 
-const contacts = [
-    "Chris: 22233232",
-    "Sarah: 23212313",
-    "Bill: 21123112",
-    "Mary: 23334234",
-    "Dianne: 92302913"
-];
 
-const para = document.querySelector("p");
-const input = document.querySelector("input");
-const btn = document.querySelector("button");
+//Display selector
+const results = document.querySelector("#results");
 
-btn.addEventListener("click", () => {
-    const searchName = input.value.toLocaleLowerCase();
-    input.value = "";
-    input.focus();
-    para.textContent = "";
-    for (const contact of contacts) {
-        const splitContact = contact.split(":");
-        if (splitContact[0].toLocaleLowerCase() === searchName){
-            para.textContent = `${splitContact[0]}'s number is ${splitContact[1]}.`;
-            break;
-        };
+//Calculations made then sent to the Displayer
+function calculate(){
+    for (let i = 1; i < 10; i++){
+        const newResult = `${i} x ${i} = ${i * i}`;
+        results.textContent += `${newResult}\n`;
     };
-    if (para.textContent === ""){
-        para.textContent = "Contact not Found."
-    }
-});
+    results.textContent += "\nFinished!\n\n";
+};
+
+ //Button initializations
+const calculateBtn = document.querySelector("#calculate");
+const clearBtn = document.querySelector("#clear");
+
+//events that should happen when buttons have been clicked
+calculateBtn.addEventListener("click", calculate);
+clearBtn.addEventListener("click", ()=> (results.textContent = ""));
