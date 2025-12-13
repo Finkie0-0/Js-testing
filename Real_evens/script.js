@@ -21,5 +21,7 @@ find.addEventListener("click", ()=>{
     display.textContent += `\nFinished!\n`
 });
 
-
+clear.addEventListener("click", ()=>{
+    display.textContent = "";
+})
 
