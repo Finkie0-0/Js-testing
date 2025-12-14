@@ -7,7 +7,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="main">
+        <!--Input area where we can input our inputs-->
+        <div class="inputArea">
+            <label for="num1">First Number: </label>
+            <input type="number">
+
+            <label for="num2">Second number: </label>
+            <input type="number">
+        </div>
+
+        <!--The button area where we can do the calculations-->
+        <div class="opsArea">
+            <button id="add">Addition +</button>
+            <button id="sub">Subtraction -</button>
+            <button id="multi">Multiplication *</button>
+            <button id="div">Division /</button>
+            <button id="mod">Remainder %</button>
+            <button id="clear">Clear</button>
+        </div>
+
+        <!--Display area where the results will be displayed-->
+        <div class="displayArea">
+            <pre id="display"></pre>
+        </div>
+    </div>
     <script src="./script.js"></script>
 </body>
 </html>
