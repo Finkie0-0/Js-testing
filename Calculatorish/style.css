@@ -39,11 +39,12 @@ pre{
     background-color: bisque;
     color: #444;
 
-    width: 200px;
+    width: fit-content;
     height: 60px;
     
     display: flex;
     justify-content: center;
+    align-items: center;
 
     margin-top: 20px;
 }
