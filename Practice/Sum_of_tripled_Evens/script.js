@@ -15,15 +15,22 @@
 // }
 
 //Take in an array
+// const arr = [1,2,3,4,5,6,7,8,9,10];
+
+// let sum = 0;
+
+// for (i = 0; i < arr.length; i++){
+//     if (arr[i] % 2 === 0){
+//         let tripled = arr[i] * 3;
+
+//         sum += tripled;
+//     }
+// }
+// console.log(sum);
+
+//Use the array methods to take evens in the array then multiply the evens by 3 then add numbers
+
 const arr = [1,2,3,4,5,6,7,8,9,10];
 
-let sum = 0;
-
-for (i = 0; i < arr.length; i++){
-    if (arr[i] % 2 === 0){
-        let tripled = arr[i] * 3;
-
-        sum += tripled;
-    }
-}
-console.log(sum);
+const filtedArr = arr.filter((num) => num % 2 === 0);
+//console.log(filtedArr)
