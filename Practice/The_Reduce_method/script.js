@@ -1,6 +1,16 @@
-const arr = [1,2,3,4,5];
-const productOfAllNums = arr.reduce((total, currentItem) => {
+// const arr = [1,2,3,4,5];
+// const productOfAllNums = arr.reduce((total, currentItem) => {
+//     return total * currentItem;
+// }, 1)
+// console.log(productOfAllNums);
+// console.log(arr)
+
+//Try to break line to into a function
+
+function mul(total,currentItem){
     return total * currentItem;
-}, 1)
+}
+
+const arr = [1,2,3,4,5];
+const productOfAllNums = arr.reduce(mul,1);
 console.log(productOfAllNums);
-console.log(arr)
