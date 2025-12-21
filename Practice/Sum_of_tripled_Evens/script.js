@@ -33,10 +33,9 @@
 const arr = [1,2,3,4,5,6,7,8,9,10];
 
 const filtedArr = arr.filter((num) => num % 2 === 0);
-//console.log(filtedArr)
 const mappedArr = filtedArr.map((num) => num * 3);
-//console.log(mappedArr);
 const redArr = mappedArr.reduce((total, currentItem) => {
     return total + currentItem
 }, 0);
-//console.log(redArr)
+
+console.log(redArr);
