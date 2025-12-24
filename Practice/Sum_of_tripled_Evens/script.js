@@ -56,6 +56,18 @@
 //     console.log("Numbers please");
 // } //For when user input is not a number
 
+let list = [];
+let i = 0;
+
+while (true){
+    let array = prompt("Enter Numbers into a list: ");
+    if ( array === ""){
+        break;
+    }else{
+        list += array;
+    }
+    i++;
+};
 
 function sumOfTripledEvens(array){
     return array
@@ -63,19 +75,3 @@ function sumOfTripledEvens(array){
         .map((num) => num * 3)
         .reduce((tot,current) => tot + current);
 };
-
-function getNums(){
-    let list = [];
-
-    while (true){
-        let array = prompt("Enter a number for the list: ")
-        if (array === ""){
-            continue;
-        }else if(array !== NaN){
-            alert("Enter a number DUDE!");
-            continue;
-        }else{
-            list += array;
-        }
-    }
-}
