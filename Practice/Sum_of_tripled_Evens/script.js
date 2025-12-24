@@ -30,12 +30,22 @@
 
 //Use the array methods to take evens in the array then multiply the evens by 3 then add numbers
 
-const arr = [1,2,3,4,5,6,7,8,9,10];
+// const arr = [1,2,3,4,5,6,7,8,9,10];
 
-const filtedArr = arr.filter((num) => num % 2 === 0);
-const mappedArr = filtedArr.map((num) => num * 3);
-const redArr = mappedArr.reduce((total, currentItem) => {
-    return total + currentItem
-}, 0);
+// const filtedArr = arr.filter((num) => num % 2 === 0);
+// const mappedArr = filtedArr.map((num) => num * 3);
+// const redArr = mappedArr.reduce((total, currentItem) => {
+//     return total + currentItem
+// }, 0);
 
-console.log(redArr);
+// console.log(redArr);
+
+
+function sumOfTripledEvens(array){
+    return array
+        .filter((num) => num % 2 === 0)
+        .map((num) => num * 3)
+        .reduce((tot,current) => tot + current);
+};
+
+console.log(sumOfTripledEvens([1,2,3,4,5,6,7,8,9,10]));
