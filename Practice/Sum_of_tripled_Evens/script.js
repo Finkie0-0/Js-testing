@@ -55,6 +55,7 @@
 // if(array !== NaN){
 //     console.log("Numbers please");
 // } //For when user input is not a number
+const result = document.querySelector("pre");
 
 let list = [];
 let i = 0;
@@ -69,9 +70,12 @@ while (true){
     i++;
 };
 
-function sumOfTripledEvens(array){
-    return array
-        .filter((num) => num % 2 === 0)
-        .map((num) => num * 3)
-        .reduce((tot,current) => tot + current);
-};
+
+
+// function sumOfTripledEvens(){
+//     return list
+//         .filter((num) => num % 2 === 0)
+//         .map((num) => num * 3)
+//         .reduce((tot,current) => tot + current);
+// };
+result.textContent = `The list is: ${sumOfTripledEvens(list)}.`
