@@ -81,6 +81,8 @@ while (true){
 //         .reduce((tot,current) => tot + current);
 // };
 
+//Change the list from string into a list
+const realList = list.split("")
 
 function calculate(){
     const filterdArr = list.filter((num) => num % 2 === 0);
@@ -91,4 +93,4 @@ function calculate(){
     result.textContent = `The list is: ${list}\n The sum of the tripled evens: ${reducedArr}`;
 };
 
-calc.addEventListener("click",calculate);
+calc.addEventListener("click",calculate());
