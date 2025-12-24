@@ -41,6 +41,22 @@
 // console.log(redArr);
 
 
+//Ask for the array from the user
+
+//Display the results onto the form
+
+//Step 1:Get user input using the prompt function
+//Step 2:Print out the user input into the front page
+//Step 3:Ensure the input is a number
+//Step 4:Run the sumOfTripledEvens using the user input
+
+
+
+// if(array !== NaN){
+//     console.log("Numbers please");
+// } //For when user input is not a number
+
+
 function sumOfTripledEvens(array){
     return array
         .filter((num) => num % 2 === 0)
@@ -48,4 +64,18 @@ function sumOfTripledEvens(array){
         .reduce((tot,current) => tot + current);
 };
 
-console.log(sumOfTripledEvens([1,2,3,4,5,6,7,8,9,10]));
+function getNums(){
+    let list = [];
+
+    while (true){
+        let array = prompt("Enter a number for the list: ")
+        if (array === ""){
+            continue;
+        }else if(array !== NaN){
+            alert("Enter a number DUDE!");
+            continue;
+        }else{
+            list += list
+        }
+    }
+}
