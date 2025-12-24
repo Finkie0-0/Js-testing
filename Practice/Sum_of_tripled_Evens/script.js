@@ -85,12 +85,14 @@ while (true){
 const realList = list.split("")
 
 function calculate(){
-    const filterdArr = list.filter((num) => num % 2 === 0);
+    
+};
+
+calc.addEventListener("click",() =>{
+    const filterdArr = realList.filter((num) => num % 2 === 0);
     const mappedArr = filterdArr.map((num) => num * 3);
     const reducedArr = mappedArr.reduce((tot, current) => {
         return tot + current;
     });
     result.textContent = `The list is: ${list}\n The sum of the tripled evens: ${reducedArr}`;
-};
-
-calc.addEventListener("click",calculate());
+});
