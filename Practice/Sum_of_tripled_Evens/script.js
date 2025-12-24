@@ -75,7 +75,7 @@ function getNums(){
             alert("Enter a number DUDE!");
             continue;
         }else{
-            list += list
+            list += array;
         }
     }
 }
