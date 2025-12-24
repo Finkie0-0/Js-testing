@@ -57,6 +57,8 @@
 // } //For when user input is not a number
 const result = document.querySelector("pre");
 
+const calc = document.querySelector("button");
+
 let list = [];
 let i = 0;
 
@@ -78,4 +80,15 @@ while (true){
 //         .map((num) => num * 3)
 //         .reduce((tot,current) => tot + current);
 // };
-result.textContent = `The list is: ${sumOfTripledEvens(list)}.`
+
+
+function calculate(){
+    const filterdArr = list.filter((num) => num % 2 === 0);
+    const mappedArr = filterdArr.map((num) => num * 3);
+    const reducedArr = mappedArr.reduce((tot, current) => {
+        return tot + current;
+    });
+    result.textContent = `The list is: ${list}\n The sum of the tripled evens: ${reducedArr}`;
+};
+
+calc.addEventListener("click",calculate);
