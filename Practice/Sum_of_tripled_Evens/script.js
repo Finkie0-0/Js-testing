@@ -84,10 +84,6 @@ while (true){
 //Change the list from string into a list
 const realList = list.split("")
 
-function calculate(){
-    
-};
-
 calc.addEventListener("click",() =>{
     const filterdArr = realList.filter((num) => num % 2 === 0);
     const mappedArr = filterdArr.map((num) => num * 3);
