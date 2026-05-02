@@ -25,15 +25,15 @@
 
 // }
 
-const sum = document.querySelector(".sum");
-const values = document.querySelector(".numbers");
+// const sum = document.querySelector(".sum");
+// const values = document.querySelector(".numbers");
 
-let added = 0
+// let added = 0
 
-while (true){
-    num = +prompt("Enter a number:", "");
-    if (!num) break;
-    added += num;
-    values.textContent += `${num}`;
-}
-sum.textContent += `The sum is ${added}`;
+// while (true){
+//     num = +prompt("Enter a number:", "");
+//     if (!num) break;
+//     added += num;
+//     values.textContent += `${num}`;
+// }
+// sum.textContent += `The sum is ${added}`;
